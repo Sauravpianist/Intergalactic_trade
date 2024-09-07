@@ -22,7 +22,7 @@ const createTrade = async (req, res) => {
     const eventPayload = [
       {
         topic: "trade_events",
-        messages: JSON.stringify({ type: "TRADE_CREATED", trade_id: trade._id }),
+        messages: JSON.stringify({ type: "TRADE_CREATED", trade_id: "66db6bad5f0e109552873623" }),
       },
     ];
 
@@ -31,6 +31,8 @@ const createTrade = async (req, res) => {
         console.error('Error producing Kafka event:', err);
         return res.status(500).send("Error producing Kafka event");
       }
+      else console.log('Trade Created event sent', data);
+
       res.status(201).send(trade);
     });
   } catch (error) {
