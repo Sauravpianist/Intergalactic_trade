@@ -15,7 +15,7 @@ app.use(cargoRoutes);
 app.use(inventoryRoutes);
 app.use(authRoutes);
 
-const uri = 'mongodb+srv://sauravpianist:S21131012506%23p@chatappreact.8pgtp.mongodb.net/intergalactic_trade'
+const uri = 'give_Your_mongodbConnectionLink'
 
 // Connect to MongoDB
 mongoose.connect(uri).then(()=> console.log("MongoDB connection established")).catch((error)=>console.log("MongoDB connection failed: ", error.message));
